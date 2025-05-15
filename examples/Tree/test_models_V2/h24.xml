@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<root name="test_case">
+	<type name="typeNode">
+		<parameter name="key" type="integer" min="1" max="100"/>
+		<node name="leftSon" type="typeNode" min="0" max="1" max_depth="24"/>
+		<node name="rightSon" type="typeNode" min="0" max="1" max_depth="24"/>
+	</type>
+
+	<node name="rootNode" type="typeNode"/>
+</root>

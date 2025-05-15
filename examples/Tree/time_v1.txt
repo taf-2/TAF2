@@ -1,0 +1,16 @@
+Generator time for tree h3: 3.31 seconds
+Generator time for tree h4: 30.38 seconds
+Generator time for tree h5: 133.98 seconds
+Generator time for tree h3: 2.77 seconds
+Generator time for tree h4: 30.04 seconds
+Generator time for tree h3: 6.93 seconds
+Generator time for tree h4: 62.27 seconds
+Generator time for tree h3: 2.30 seconds
+Generator time for tree h4: 1.02 seconds
+Generator time for tree h3: 6.71 seconds
+Generator time for tree h4: 71.37 seconds
+Generator time for tree h5: 789.20 seconds
+Generator time for tree h3: 8.71 seconds
+Generator time for tree h4: 17.22 seconds
+Generator time for tree h5: 0.16 seconds
+Generator time for tree h6: 2.55 seconds

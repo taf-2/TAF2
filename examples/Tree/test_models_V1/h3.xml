@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<root name="test_case">
+	<parameter name="height" type="integer" min="1" max="2"/>
+    <node name="node" min="1" max="7">
+        <parameter name="father" type="integer" min="-1" max="7"/>
+        <parameter name="depth" type="integer" min="0" max="2"/>
+
+		<constraint name="root_father"
+			    expressions="node[0]\father EQ -1"/>
+		
+		<constraint name="inductive_depth_0"
+			    expressions="node[0]\depth EQ 0"/>
+
+		<constraint name="other_father" types="forall"
+			    expressions="node[i]\father SUPEQ 0; node[i]\father INF node.nb_instances"
+			    quantifiers="i"
+			    ranges="[1,node.nb_instances-1]"/>
+
+		<constraint name="height_depth_1" types="forall"
+            expressions="node[i]\depth INFEQ ..\height"
+            quantifiers ="i"
+            ranges="[1, node.nb_instances-1]"/>
+
+		<constraint name="at_most_two_children" types="forall;forall;forall"
+				expressions="IMPLIES(AND(node[i]\father EQ node[j]\father, AND(i DIF j, AND(i DIF k, j DIF k))), node[k]\father DIF node[i]\father)"
+				quantifiers="i;j;k"
+				ranges="[1, node.nb_instances-1];[1, node.nb_instances-1];[1, node.nb_instances-1]"/>
+
+		<constraint name="inductive_depth_1" types="forall;forall"
+			    expressions="IMPLIES(node[i]\father EQ j, node[j]\depth+1 EQ node[i]\depth)"
+			    quantifiers="i;j"
+			    ranges="[1,node.nb_instances-1];[0,node.nb_instances-1]"/>
+	</node>
+</root>
