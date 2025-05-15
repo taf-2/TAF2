@@ -50,7 +50,7 @@ cd Coverage_analysis/v2
 python3 launch_analysis.py
  ```
 
-For each test suite, a analysis will be added in a csv file.
+For each test suite, an analysis will be added in a csv file.
 
 **Test cases generation tuning:**
 You can modify the number of generated test cases for each test suites by editing L6 of the file settings.xml
